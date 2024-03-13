@@ -4,14 +4,17 @@ import {
     TabList,
     TabPanels,
     Tab,
-    TabPanel
+    TabPanel,
+    Flex
 } from '@chakra-ui/react'
+import AboutMe from './AboutMe'
 
 const TabsComponent = () => {
   return (
   <>
     <div>Tabs</div>
-    <Tabs>
+    <Flex direction="column" width="100%">
+    <Tabs variant="enclosed" flex={1} width="100%">
         <TabList>
             <Tab>Main Page</Tab>
             <Tab>Projects</Tab>
@@ -26,9 +29,11 @@ const TabsComponent = () => {
             </TabPanel>
             <TabPanel>
                 <p>About Me</p>
+                <AboutMe />
             </TabPanel>
         </TabPanels>
     </Tabs>
+    </Flex>
     </>
   )
 }
