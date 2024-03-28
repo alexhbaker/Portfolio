@@ -8,6 +8,7 @@ import {
   AlertDescription,
 } from '@chakra-ui/react'
 import TabsComponent from './Components/TabsComponent'
+import Banner from './Components/Banner'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <ChakraProvider>
+        <Banner />
         <Alert status='warning'>
           <AlertIcon />
           <AlertTitle>Under Construction</AlertTitle>
